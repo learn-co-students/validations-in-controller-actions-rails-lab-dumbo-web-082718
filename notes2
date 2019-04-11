@@ -1,0 +1,17 @@
+I are currently in the PostsController and we want
+to return the edit form because the
+input that we inputed into the form is invalid
+
+goal:
+
+in edit
+1. find the author
+@post = Post.find(params[:id])
+2. check to see if it is valid
+if @post.valid?
+  @post.save
+  redirect_to edit_post(@post)
+else
+  render :update
+end
+3. create a condition:
